@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Bond 007 Museum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>James Bond 007 Museum</h1>
+        <nav>
+            <ul>
+                <li><a href="#featured">Utvalgte utstillinger</a></li>
+                <li><a href="store.html">Butikk</a></li>
+                <li><a href="visit.html">Besøk oss</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Utvalgte utstillinger seksjon -->
+    <section id="featured">
+        <h2>Utvalgte utstillinger</h2>
+        <div id="exhibits-container">
+            <div class="exhibit" id="exhibit1">
+                <button class="hide-btn" onclick="toggleExhibit('exhibit1')" style="background: none !important; border: none; font-size: 10px; color: #888;">&#9660;</button>
+                <img src="bilder/cessna-n96816.jpg" alt="Cessna 172 fra James Bond">
+                <h3>Cessna 172 Fly</h3>
+                <p>Dette flyet ble brukt i en kjent James Bond film.</p>
+                <label for="visit-date">Velg dato for besøk:</label>
+                <input type="date" id="visit-date" name="visit-date" onchange="checkAvailability(this.value, 'message1')">
+                <p id="message1"></p>
+            </div>
+            <div class="exhibit" id="exhibit2">
+                <button class="hide-btn" onclick="toggleExhibit('exhibit2')" style="background: none !important; border: none; font-size: 10px; color: #888;">&#9660;</button>
+                <img src="bilder/81EdG7H2KrL._AC_UF1000,1000_QL80_.jpg" alt="Aston Martin DB5">
+                <h3>Aston Martin DB5</h3>
+                <p>Kjøretøyet kjent fra flere James Bond-filmer.</p>
+                <label for="visit-date2">Velg dato for besøk:</label>
+                <input type="date" id="visit-date2" name="visit-date2" onchange="checkAvailability(this.value, 'message2')">
+                <p id="message2"></p>
+            </div>
+            <div class="exhibit" id="exhibit3">
+                <button class="hide-btn" onclick="toggleExhibit('exhibit3')" style="background: none !important; border: none; font-size: 10px; color: #888;">&#9660;</button>
+                <img src="bilder/GGBG001_c8726f57-6803-4dc1-9792-ff512dc1c641_2048x.webp" alt="The Golden Gun">
+                <h3>The Golden Gun</h3>
+                <p>Den ikoniske pistolen fra 'The Man with the Golden Gun'.</p>
+                <label for="visit-date3">Velg dato for besøk:</label>
+                <input type="date" id="visit-date3" name="visit-date3" onchange="checkAvailability(this.value, 'message3')">
+                <p id="message3"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video seksjon -->
+    <h1>Bra på video, enda bedre i virkeligheten</h1>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yPNjEKIOW34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <section id="social-media">
+        <h2>Følg oss på sosiale medier</h2>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="bilder/2021_Facebook_icon.svg.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="bilder/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.avif" alt="Instagram"></a>
+            <a href="https://twitter.com" target="_blank"><img src="bilder/2504839.png" alt="Twitter"></a>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <h2>Nyhetsbrev</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Din e-postadresse" required>
+            <button type="submit">Abonner</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 James Bond 007 Museum</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

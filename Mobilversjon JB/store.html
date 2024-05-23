@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butikk - James Bond 007 Museum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>James Bond 007 Museum</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="store.html">Butikk</a></li>
+                <li><a href="visit.html">Besøk oss</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="store-products">
+        <h2>Vår Butikk</h2>
+        <div class="filter-controls">
+            <label for="category">Kategori:</label>
+            <select id="category" onchange="filterProductsByCategory()">
+                <option value="all">Alle</option>
+                <option value="clothing">Klær</option>
+                <option value="collectibles">Samleobjekter</option>
+                <option value="accessories">Tilbehør</option>
+            </select>
+            <label for="price">Pris:</label>
+            <select id="price" onchange="filterProductsByPrice()">
+                <option value="all">Alle</option>
+                <option value="0-500">Under 500 kr</option>
+                <option value="500-1000">500-1000 kr</option>
+                <option value="1000+">Over 1000 kr</option>
+            </select>
+        </div>
+
+        <div class="product" data-category="clothing">
+            <img src="bilder/s-l1200.jpg" alt="James Bond T-shirt">
+            <h3>James Bond T-shirt</h3>
+            <p>Eksklusiv t-skjorte med James Bond-tema.</p>
+            <p>399 kr</p>
+            <button onclick="openModal('modal1')">Kjøp Nå</button>
+        </div>
+        <div class="product" data-category="collectibles">
+            <img src="bilder/tc009-toystate-aston-martin-db5-skyfall-no-controller.jpg" alt="James Bond Car Model">
+            <h3>James Bond Bilmodell</h3>
+            <p>Samleobjekt av Aston Martin DB5.</p>
+            <p>499 kr</p>
+            <button onclick="openModal('modal2')">Kjøp Nå</button>
+        </div>
+        <div class="product" data-category="accessories">
+            <img src="bilder/skyfall---omega-seamaster-aqua-terra-231_10_39_21_03_001-1694001912034.webp" alt="James Bond Klokke">
+            <h3>James Bond Klokke</h3>
+            <p>Elegant armbåndsur brukt i filmene.</p>
+            <p style="color: red;">Tilbud !</p>
+            <p style="color: red;">2500 kr</p>
+            <button onclick="openModal('modal3')">Kjøp Nå</button>
+        </div>
+        <div class="product" data-category="accessories">
+            <img src="bilder/877d3c2_dd121449001.jpg" alt="James Bond Penn">
+            <h3>James Bond Penn</h3>
+            <p>Limited edition spionpenn med skjulte funksjoner.</p>
+            <p>150 kr</p>
+            <button onclick="openModal('modal4')">Kjøp Nå</button>
+        </div>
+
+        <!-- Nedtellingsklokke -->
+        <section id="countdown-section">
+            <h2 id="countdown">Tilbud ender om: <span id="time"></span></h2>
+        </section>
+    </section>
+
+    <!-- Nyhetsbrev seksjon -->
+    <section id="newsletter">
+        <h2>Nyhetsbrev</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Din e-postadresse" required>
+            <button type="submit">Abonner</button>
+        </form>
+    </section>
+
+    <!-- Modal vinduer for produkter -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <img src="bilder/s-l1200.jpg" alt="James Bond T-shirt">
+            <h3>James Bond T-shirt</h3>
+            <p>Eksklusiv t-skjorte med James Bond-tema.</p>
+            <p>399 kr</p>
+            <button>Kjøp Nå</button>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <img src="bilder/tc009-toystate-aston-martin-db5-skyfall-no-controller.jpg" alt="James Bond Car Model">
+            <h3>James Bond Bilmodell</h3>
+            <p>Samleobjekt av Aston Martin DB5.</p>
+            <p>499 kr</p>
+            <button>Kjøp Nå</button>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <img src="bilder/skyfall---omega-seamaster-aqua-terra-231_10_39_21_03_001-1694001912034.webp" alt="James Bond Klokke">
+            <h3>James Bond Klokke</h3>
+            <p>Elegant armbåndsur brukt i filmene.</p>
+            <p style="color: red;">Tilbud !</p>
+            <p style="color: red;">2500 kr</p>
+            <button>Kjøp Nå</button>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <img src="bilder/877d3c2_dd121449001.jpg" alt="James Bond Penn">
+            <h3>James Bond Penn</h3>
+            <p>Limited edition spionpenn med skjulte funksjoner.</p>
+            <p>150 kr</p>
+            <button>Kjøp Nå</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 James Bond 007 Museum</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
